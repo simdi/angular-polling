@@ -20,24 +20,14 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- <tr v-if="loading && posts === 0">
-                    <td colspan="6">
-                        <div class="text-center loading-box">
-                            <i class="fa fa-spinner fa-spin fa-2x"></i>
-                            <span> Loading content...</span>
-                        </div>
-                    </td>
-                </tr> -->
                 <tr>
                   <td colspan="6">
                     <div class="col-4">
-                      <!-- <form [formGroup]="filterForm"> -->
                         <input type="text" class="form-control" [formControl]="searchControl" placeholder="Filter by Title">
-                      <!-- </form> -->
                     </div>
                   </td>
                 </tr>
-                <tr *ngFor="let item of posts; let i = index" (click)="onClickViewPost(item)">
+                <tr *ngFor="let item of posts; let i = index" (click)="onClickViewPost(item)" class="pointer">
                     <th>{{ i+1 }}</th>
                     <td>{{ item.title }}</td>
                     <td>{{ item.url }}</td>
