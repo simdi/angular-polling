@@ -32,7 +32,7 @@
                     <td>{{ item.title }}</td>
                     <td>{{ item.url }}</td>
                     <td>{{ item.created_at }}</td>
-                    <td>{{ item.author }}</td>
+                    <td>{{ item.author | uppercase }}</td>
                     <td>
                       <button class="btn btn-success" data-toggle="modal" data-target="#postModal"  (click)="onClickViewPost(item)">View</button>
                     </td>
